@@ -1,0 +1,155 @@
+@import url("./required.css");
+
+.overlay {
+  width: 700px;
+  height: 60vh;
+  background-color: rgba(24, 24, 24, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* transform: translate(-350px, -35vh); */
+  transform: translate(-350px, -700vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 1000ms linear;
+}
+
+.show_overlay {
+  transform: translate(-350px, -30vh);
+}
+
+.closing_btn {
+  align-self: flex-end;
+  clear: both;
+}
+.closing_btn .fa-window-close {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.file_info {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.file_link {
+  min-width: 100px;
+  max-width: 600px;
+  height: 60px;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  margin-top: 1.2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_link {
+  font-size: 1.2rem;
+  line-height: 25px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.file_sharing_link {
+  color: var(--gray_col);
+  cursor: pointer;
+}
+
+.file_sharing_link:hover {
+  color: #add8e6;
+}
+
+.copy_link {
+  color: var(--grad_col_1);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.copy_link:hover {
+  color: #ff69b4;
+  /* color: #90ee90; */
+}
+
+.send_via_email {
+  margin: 1rem 0 0.2rem 0;
+}
+
+.via_email {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.gmail_share {
+  width: 500px;
+  height: 400px;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  /* margin-top: 1rem; */
+}
+
+.gmail_share form {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 4px dashed var(--grad_col_2);
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gmail_share label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.gmail_share input {
+  width: 12rem;
+  font-size: 1rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  color: var(--gray_col);
+  caret-color: var(--grad_col_1);
+  border-bottom: 2px solid var(--grad_col_1);
+}
+
+.sender {
+  margin-top: 0.5rem;
+}
+
+.receiver {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.submit_btn button {
+  margin: 0 auto;
+}
+
+button[type="submit"] {
+  width: 5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--grad_col_2);
+}
+
+.hide_element {
+  display: none;
+}

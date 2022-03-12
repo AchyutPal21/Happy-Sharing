@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Sharing</title>
+    <link rel="shortcut icon" href="/img/siteicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/578ef74b80.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav_bar">
+      <div class="icon">
+        <img src="/img/siteicon.png" alt="icon" />
+      </div>
+      <div class="nav_title_text">
+        <p class="title">Happy Sharing</p>
+        <p class="title_slogan">Easy File Sharing</p>
+      </div>
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container">
+      <!-- DOWNLOAD FILE WRAPPER -->
+      <section class="download_file_wrapper">
+        <div class="download_img">
+          <img src="/img/download.png" alt="download image" />
+        </div>
+        <% if (locals.error) { %>
+          <div class="download_title">
+            <h2><%= locals.error %></h2>
+          </div>
+          <div class="download_btn">
+            <a href="<%= home %>">Visit Us</a>
+          </div>
+        <% } else { %>
+          <div class="download_title">
+            <h2>Your file is ready to download✨</h2>
+          </div>
+          <div class="exp_time">
+            <p>Link expires in <%= fileExp %></p>
+          </div>
+          <div class="file_name">
+            <p><%= fileName %></p>
+          </div>
+          <div class="file_size">
+            <p><%= fileSize %></p>
+          </div>
+          <div class="download_btn">
+            <a href="<%= downloadLink %>">Download File</a>
+          </div>
+        <% } %>
+      </section>
+    </div>
+
+    <!-- TOST MESSAGE -->
+    <div class="tost">
+        <div class="tost_container">
+            <p class="tost_msg">File less then 100MB only</p>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer_container">
+            <div class="dev_id">
+            <p>
+                Made with <span><i class="fas fa-heart"></i></span>
+            </p>
+            </div>
+            <div class="social_links">
+            <a href="https://www.linkedin.com/in/achyutpal21">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/AchyutPal21">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://github.com/AchyutPal21">
+                <i class="fab fa-github-square"></i>
+            </a>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

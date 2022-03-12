@@ -1,0 +1,460 @@
+@media screen and (max-width: 480px) {
+  @import url("./required.css");
+
+  /* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  } */
+
+  /* NAVBAR STYLING */
+  /* Nav-bar */
+  .nav_bar {
+    width: 80vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    /* background-color: lightgreen; */
+    margin: 1rem auto 3rem;
+  }
+
+  .nav_bar img {
+    width: 32px;
+  }
+
+  .nav_title_text {
+    text-align: center;
+    margin-left: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    color: #1bb5f2;
+  }
+
+  .title_slogan {
+    font-size: 0.8rem;
+    color: #f227ab;
+    padding-top: 0.2rem;
+    letter-spacing: 2px;
+  }
+
+  /* BODY STYLING */
+  /* Container */
+  .container {
+    /* height: 80vh; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sharing_wrapper {
+    width: 350px;
+    height: 350px;
+    padding: 1rem;
+    border: 4px dashed #d4d4d4;
+    border-radius: 2rem;
+    background-image: url("../img/dropFileIcon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  .sharing_wrapper_border {
+    border-color: var(--gray_col);
+  }
+
+  #fileInput,
+  .file__Input {
+    display: none;
+  }
+
+  .drop_text {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--grad_col_2);
+    text-align: center;
+  }
+
+  .drop_text span {
+    color: var(--grad_col_1);
+    cursor: pointer;
+  }
+
+  .drop_animation {
+    width: 100%;
+  }
+
+  .animate_bouncing ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .animate_bouncing ul li {
+    width: 15px;
+    height: 15px;
+    list-style: none;
+    margin: 0 10px;
+    border-radius: 50%;
+    animation: bounce 1s linear infinite;
+  }
+
+  /* .start_animating_bounce {
+} */
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-80px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate_bouncing ul li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .animate_bouncing ul li:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .animate_bouncing ul li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .animate_bouncing ul li:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+  .animate_bouncing ul li:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+
+  .progress_bar {
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 1rem;
+    background-color: var(--gray_col);
+    transition: width 1000ms linear;
+    opacity: 0;
+  }
+
+  /* Download wrapper */
+  .download_file_wrapper {
+    width: 350px;
+    height: 380px;
+    padding: 1rem;
+    border: 4px dashed #d4d4d4;
+    border-radius: 2rem;
+  }
+
+  .download_img {
+    min-width: 64px;
+    max-width: 64px;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .download_img img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .download_title,
+  .exp_time,
+  .file_name {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .exp_time {
+    font-size: 1rem;
+    font-weight: 350;
+    letter-spacing: 1px;
+  }
+
+  .file_name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  .file_size {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--gray_col);
+    margin-top: 0.4rem;
+  }
+
+  .download_btn {
+    margin-top: 1.4rem;
+  }
+
+  .download_btn a {
+    width: 10rem;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    background-color: var(--grad_col_1);
+    margin: 0 auto;
+  }
+
+  .hide_element {
+    display: none;
+  }
+
+  .null_opacity {
+    opacity: 0;
+  }
+
+  .tost {
+    width: 100vw;
+    margin-top: 7rem;
+  }
+
+  .tost_container {
+    min-width: 10%;
+    max-width: 50%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 10px 4px;
+    border-radius: 1rem;
+    margin: 0 auto;
+    color: #fff;
+    transform: translateX(-1000rem);
+    transition: all 1s linear;
+  }
+
+  .tost_in {
+    transform: translateX(0px);
+  }
+
+  .tost_success {
+    background-color: var(--grad_col_2);
+  }
+  .tost_error {
+    background-color: var(--grad_col_1);
+  }
+
+  /* OVERLAY STYLING */
+  .overlay {
+    width: 360px;
+    height: 460px;
+    background-color: rgba(24, 24, 24, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* transform: translate(-180px, -35vh); */
+    transform: translate(-180px, -200vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1000ms linear;
+  }
+
+  .show_overlay {
+    transform: translate(-350px, -30vh);
+  }
+
+  .closing_btn {
+    align-self: flex-end;
+    clear: both;
+  }
+  .closing_btn .fa-window-close {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .file_info {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .file_link {
+    min-width: 100px;
+    max-width: 320px;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show_link {
+    font-size: 1.2rem;
+    line-height: 25px;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+
+  .file_sharing_link {
+    color: var(--gray_col);
+    cursor: pointer;
+  }
+
+  .file_sharing_link:hover {
+    color: #add8e6;
+  }
+
+  .copy_link {
+    color: var(--grad_col_1);
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .copy_link:hover {
+    color: #ff69b4;
+    /* color: #90ee90; */
+  }
+
+  .send_via_email {
+    margin: 1rem 0 0.2rem 0;
+  }
+
+  .via_email {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .gmail_share {
+    width: 320px;
+    height: 360px;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    /* margin-top: 1rem; */
+  }
+
+  .gmail_share form {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 4px dashed var(--grad_col_2);
+  }
+
+  form > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .gmail_share label {
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .gmail_share input {
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    color: var(--gray_col);
+    caret-color: var(--grad_col_1);
+    border-bottom: 2px solid var(--grad_col_1);
+  }
+
+  .sender {
+    margin-top: 0px;
+  }
+
+  .receiver {
+    margin-top: 1.5rem;
+    margin-bottom: 2.2rem;
+  }
+  .submit_btn button {
+    margin: 0 auto;
+  }
+
+  button[type="submit"] {
+    width: 5rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: var(--grad_col_2);
+  }
+
+  .hide_element {
+    display: none;
+  }
+
+  /* FOOTER STYLING */
+  /* Footer */
+  footer {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .footer_container {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dev_id {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gray_col);
+    margin-bottom: 0.5rem;
+  }
+
+  .dev_id span {
+    color: #f71c22;
+  }
+
+  .social_links {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .social_links a {
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+
+  .fa-linkedin {
+    color: #0e76a8;
+  }
+
+  .fa-twitter-square {
+    color: #00acee;
+  }
+
+  .fa-github-square {
+    color: #171515;
+  }
+}

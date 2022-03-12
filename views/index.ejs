@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Sharing</title>
+    <link rel="shortcut icon" href="/img/siteicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/578ef74b80.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav_bar">
+      <div class="icon">
+        <img src="/img/siteicon.png" alt="icon" />
+      </div>
+      <div class="nav_title_text">
+        <p class="title">Happy Sharing</p>
+        <p class="title_slogan">Easy File Sharing</p>
+      </div>
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container">
+      <!-- SAHRING WRAPPER -->
+      <section class="sharing_wrapper">
+        <div class="file__Input">
+          <input type="file" name="myfile" id="fileInput">
+        </div>
+        <div class="drop_text">
+          <p>Drop your file here or, <span class="browse_file">Browse File</span></p>
+        </div>
+        <div class="drop_animation">
+          <div class="animate_bouncing">
+            <ul>
+              <li style="background-color: #fdcb6e"></li>
+              <li style="background-color: #55efc4"></li>
+              <li style="background-color: #ff7675"></li>
+              <li style="background-color: #81ecec"></li>
+              <li style="background-color: #fd79a8"></li>
+            </ul>
+          </div>
+          <div class="progress_bar" style="opacity: 0;"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TOST MESSAGE -->
+    <div class="tost">
+        <div class="tost_container">
+            <p class="tost_msg">File less then 100MB only</p>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer_container">
+            <div class="dev_id">
+            <p>
+                Made with <span><i class="fas fa-heart"></i></span>
+            </p>
+            </div>
+            <div class="social_links">
+            <a href="https://www.linkedin.com/in/achyutpal21">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/AchyutPal21">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://github.com/AchyutPal21">
+                <i class="fab fa-github-square"></i>
+            </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- OVERLAY CONTAINER -->
+    <div class="overlay" style="opacity: 0;">
+      <div class="closing_btn">
+        <i class="fas fa-window-close"></i>
+      </div>
+      <div class="file_info">
+        <p class="file_dts">Link expires in 24hours</p>
+      </div>
+      <div class="file_link">
+        <div class="show_link">
+          <p class="file_sharing_link">
+            https://www.linkedin.com/in/achyutpal21
+          </p>
+        </div>
+        <div class="copy_link">
+          <i class="far fa-clone"></i>
+        </div>
+      </div>
+      <div class="send_via_email">
+        <p class="via_email">Or Send Via Email</p>
+      </div>
+      <div class="gmail_share">
+        <form id="emailForm">
+          <div class="sender">
+            <label for="sender">Your Email: </label>
+            <input type="email" name="from-email" id="sender" placeholder="your email address..." required/>
+          </div>
+          <div class="receiver">
+            <label for="receiver">Receiver's Email: </label>
+            <input type="email" name="to-email" id="receiver" placeholder="receiver email address..." required/>
+          </div>
+          <div class="submit_btn">
+            <button class="send_link_via_email" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/js/index_main.js"></script>
+  </body>
+</html>
