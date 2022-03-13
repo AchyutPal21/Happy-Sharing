@@ -15,7 +15,7 @@ const sendMailBtn = overlay.querySelector("#emailForm");
 // Tost message
 const tost = document.querySelector(".tost_container");
 
-const host = "http://localhost:3000";
+const host = "https://happy-sharing-efs.herokuapp.com";
 const uploadURL = `${host}/api/v1/file`;
 const emailURL = `${host}/file/download/email`;
 
