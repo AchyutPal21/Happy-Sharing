@@ -16,9 +16,8 @@ const sendMailBtn = overlay.querySelector("#emailForm");
 const tost = document.querySelector(".tost_container");
 
 const host = "https://happy-sharing-efs.herokuapp.com";
-// const host = "http://localhost:3000";
-const uploadURL = `${host}api/v1/file`;
-const emailURL = `${host}file/download/email`;
+const uploadURL = `${host}/api/v1/file`;
+const emailURL = `${host}/file/download/email`;
 
 // ---------------------------Code---------------------------
 
@@ -96,14 +95,9 @@ function showDownloadPageLink(link) {
   const { file } = JSON.parse(link);
   delayOverlay = setTimeout(() => {
     overlayShowLink.textContent = file;
+    console.log(file);
     overlay.style.opacity = "1";
     mailFrom.value = mailTo.value = "";
-
-    // if (fullWidth >= 524) {
-    //   overlay.style.transform = "translate(-350px, -35vh)";
-    // } else {
-    //   overlay.style.transform = "translate(-180px, -35vh)";
-    // }
 
     overlay.style.transform =
       fullWidth >= 524
