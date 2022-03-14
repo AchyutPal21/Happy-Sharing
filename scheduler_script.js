@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const connectDB = require("./config/db");
 connectDB();
 const File = require("./models/modelFile");
@@ -12,7 +13,8 @@ async function deleteData() {
     if (files.length) {
       console.log(`Expired files:${files.length}`);
       for (let file of files) {
-        fs.unlinkSync(file.path);
+        fs.unlinkSync(path.join(__dirname, `/${file.path}`));
+        console.log(path.join(__dirname, `/${file.path}`));
         await file.remove();
         console.log(
           `Successfully deleted ${
